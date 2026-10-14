@@ -1,0 +1,6 @@
+{
+  "name": "SW Service Desk v1.0",
+  "description": "Service Desk corporativo e ITIL completo da SW Cloud Solutions com gestão de incidentes, CMDB, SLA, workflows, automações e IA privada de assistência aos técnicos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

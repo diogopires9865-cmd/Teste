@@ -1,0 +1,25 @@
+[Unit]
+Description=SW Service Desk v1.0 Service Daemon (SW Cloud Solutions)
+After=network.target mysql.service
+
+[Service]
+Type=simple
+User=servicedesk
+WorkingDirectory=/var/www/sw-service-desk
+ExecStart=/usr/bin/npm start
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=sw-service-desk
+Environment=NODE_ENV=production
+EnvironmentFile=/var/www/sw-service-desk/.env
+
+# Security sandbox
+ProtectSystem=full
+ProtectHome=true
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
